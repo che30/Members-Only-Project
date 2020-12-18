@@ -1,0 +1,118 @@
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from migration_template at (erb):6)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from migration_template at (erb):6)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at /home/che/Desktop/microverse rails projects/Members-Only-Project/bin/rails:5)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at /home/che/Desktop/microverse rails projects/Members-Only-Project/bin/rails:5)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at /home/che/Desktop/microverse rails projects/Members-Only-Project/bin/rails:5)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at /home/che/Desktop/microverse rails projects/Members-Only-Project/bin/rails:5)
+DEPRECATION WARNING: [] is deprecated and will be removed from Rails 6.2 (Use configs_for) (called from <main> at /home/che/Desktop/microverse rails projects/Members-Only-Project/bin/rails:5)
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (126.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (137.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20201218173340)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201218173340"]]
+  [1m[36mTRANSACTION (132.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-18 17:33:55.699116"], ["updated_at", "2020-12-18 17:33:55.699116"]]
+  [1m[36mTRANSACTION (113.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20201218173629)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201218173629"]]
+  [1m[36mTRANSACTION (119.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-12-18 18:37:12 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1251)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-18 18:37:22 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1453)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/che/Desktop/microverse rails projects/Members-Only-Project/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.44.2
+Time: 10218ms
+Built at: 18/12/2020 18:37:36
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 24621.0ms | Allocations: 32511)
+Completed 200 OK in 24706ms (Views: 24650.4ms | ActiveRecord: 0.3ms | Allocations: 39201)
+
+
+[Webpacker] Compiled all packs in /home/che/Desktop/microverse rails projects/Members-Only-Project/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.44.2
+Time: 9035ms
+Built at: 18/12/2020 18:37:36
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 15177.7ms | Allocations: 9878)
+Completed 200 OK in 15182ms (Views: 15177.6ms | ActiveRecord: 1.1ms | Allocations: 13002)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-12-18 18:37:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/che/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/che/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 229)
+  Rendered /home/che/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 534)
+  Rendered /home/che/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 139.1ms | Allocations: 7714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.2ms | Allocations: 11073)
+Completed 200 OK in 300ms (Views: 270.9ms | ActiveRecord: 1.6ms | Allocations: 17261)
+
+
+Started GET "/" for ::1 at 2020-12-18 18:37:54 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4091)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 4485)
+
+
