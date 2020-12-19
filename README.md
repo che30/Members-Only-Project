@@ -46,11 +46,11 @@ Navigate to the folder you cloned the git repository and to run our project type
 
 ## Author 2
 
-👤 **A B M Asadullah**
+👤 **AChe Blanchard**
 
-- GitHub: [@abmAsadullah](https://github.com/abmAsadullah)
-- Twitter: [@abmAsadullah](https://twitter.com/abmAsadullah)
-- LinkedIn: [abmAsadullah](https://www.linkedin.com/in/abmAsadullah)
+- GitHub: [@che30](https://github.com/che30)
+- Twitter: [@BlanchardNsoh](https://twitter.com/che55085128 )
+- LinkedIn: [Che Blanchard](https://www.linkedin.com/in/che-nsoh-9455271b0/)
 
 
 ## 🤝 Contributing
