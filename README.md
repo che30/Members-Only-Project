@@ -12,7 +12,6 @@ Basic project for Authentication, cookies, and user sessions. The main page is w
 -Rails
 -Devise
 
-# Live Preview
 
 # Getting Started
 This project was created to understand more about Authentication using Devise and User sessions and cookies
