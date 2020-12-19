@@ -4,11 +4,14 @@
 
   <tbody>
     <% @posts.each do |post| %>
+    <ul>
+      <li> <strong> Title: </strong><%= post.title %></li>
+      <li><strong> Body: </strong><%= post.body %></li>
+    </ul>
     <% if user_signed_in?%>
       <ul>
-        <li><%= post.title %></li>
-        <li><%= post.body %></li>
-      <li ><%= post.user.username %></li>
+        <li > <strong> Name: </strong><%= post.user.name %></li>
+        <li ><strong> User Name: </strong> <%= post.user.username %></li>
       </ul>
     <% end %>
       <% end %>
