@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # user
 class AddFieldsToUsers < ActiveRecord::Migration[6.1]
   def change
