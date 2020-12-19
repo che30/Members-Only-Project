@@ -6,7 +6,7 @@
     <% @posts.each do |post| %>
     <ul>
       <li> <strong> Title: </strong><%= post.title %></li>
-      <li><strong> Body: </strong><%= post.body %></li>
+      <li><strong> Body: </strong><%= post.body %></li> <br>
     </ul>
     <% if user_signed_in?%>
       <ul>
