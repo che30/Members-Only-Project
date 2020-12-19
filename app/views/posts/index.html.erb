@@ -1,0 +1,24 @@
+<p><%= notice %></p>
+
+<h1>Posts</h1>
+
+  <tbody>
+    <% @posts.each do |post| %>
+    <ul>
+      <li> <strong> Title: </strong><%= post.title %></li>
+      <li><strong> Body: </strong><%= post.body %></li> <br>
+    </ul>
+    <% if user_signed_in?%>
+      <ul>
+        <li > <strong> Name: </strong><%= post.user.name %></li>
+        <li ><strong> User Name: </strong> <%= post.user.username %></li>
+      </ul>
+    <% end %>
+      <% end %>
+  </tbody>
+</table>
+        
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
